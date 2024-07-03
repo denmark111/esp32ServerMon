@@ -1,8 +1,12 @@
 import psutil
-import os
 import serial
 from subprocess import PIPE, run
 import time
+
+
+DEVICE_NAME = "/dev/ttyACM0"
+BAUD_RATE = 115200
+CHECK_INTERVAL = 30
 
 
 def sendSerialData(data, device, baudrate):
@@ -94,16 +98,18 @@ def getPowerUsage():
 
 def main():
     payload = f",{getCpuMetrics()},{getMemoryMetrics()},{getDiskMetrics()},{getCpuTempMetrics()},{checkHealth()}\n"
-    print(getCpuMetrics())
-    print(getMemoryMetrics())
-    print(getDiskMetrics())
-    print(getCpuTempMetrics())
-    print(payload)
-    sendSerialData(payload, "/dev/ttyACM0", 115200)
+    
+    ## Uncomment to debug
+    #print(getCpuMetrics())
+    #print(getMemoryMetrics())
+    #print(getDiskMetrics())
+    #print(getCpuTempMetrics())
+    #print(payload)
+    
+    sendSerialData(payload, DEVICE_NAME, BAUD_RATE)
 
 
 if __name__ in "__main__":
     while(True):
         main()
-        time.sleep(30)
-    #main()
+        time.sleep(CHECK_INTERVAL)
