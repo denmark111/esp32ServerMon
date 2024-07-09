@@ -15,6 +15,7 @@ Any fixes or improvements are always welcome!!
 - Memory usage in %
 - Load Average (15m)
 - Disk R/W IOPS (Cycles between read and write with a button)
+- Disk health (green dots in top right corner of disk grid)
 - Overall health **(Currently not implemented)**
 
 ## Tested environment
