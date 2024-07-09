@@ -45,7 +45,7 @@ Any fixes or improvements are always welcome!!
 2. Copy collector script
     ``` bash
     cd esp32servermon
-    cp metrics-collector /opt/
+    cp -r metrics-collector /opt/
     ```
 3. Install python requirments
     ``` python
