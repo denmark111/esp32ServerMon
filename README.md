@@ -35,8 +35,14 @@ Any fixes or improvements are always welcome!!
     cd esp32servermon
     cp metrics-collector /opt/
     ```
-3. Copy systemd service file
-4. Config collector script
+3. Install python requirments
+    ``` python
+    cd /opt/metrics-collector
+    python3 -m venv venv
+    venv/bin/pip install -r requirments.txt
+    ```
+4. Copy systemd service file
+5. Config collector script
     - Change DEVICE_NAME
     - Change BAUD_RATE **(Only if necessary)**
     - Change CHECK_INTERVAL **(Only if necessary)**
@@ -45,7 +51,7 @@ Any fixes or improvements are always welcome!!
     BAUD_RATE = 115200
     CHECK_INTERVAL = 30
     ```
-5. Run collector
+6. Run collector
     ``` bash
     systemctl daemon-reload
     systemctl start metrics-collector
