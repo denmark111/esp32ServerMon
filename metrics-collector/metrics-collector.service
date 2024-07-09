@@ -1,0 +1,12 @@
+[Unit]
+Description=ESP32 Metrics Collector
+After=network.target
+
+[Service]
+Type=idle
+Restart=on-failure
+User=root
+ExecStart=/opt/metrics-collector/venv/bin/python3 /opt/metrics-collector/collector.py
+
+[Install]
+WantedBy=multi-user.target

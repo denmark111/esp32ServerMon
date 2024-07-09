@@ -4,8 +4,10 @@ from subprocess import PIPE, run
 import time
 
 
+# USB device name, your device name could be different
 DEVICE_NAME = "/dev/ttyACM0"
 BAUD_RATE = 115200
+# Interval between metrics sent to esp32
 CHECK_INTERVAL = 30
 
 

@@ -3,7 +3,8 @@ Offline server monitoring tool
 Any fixes or improvements are always welcome!!
 
 ## Working examples
-
+![working_sample_1](./images/IMG_0277.jpg){: width="50%" height="50%" }
+![working_sample_2](./images/IMG_0279.jpeg)
 
 ## Tested environment
 1. Hardware
@@ -19,7 +20,7 @@ Any fixes or improvements are always welcome!!
 1. Install PlatformIO vscode plugin (install vscode first if not installed)
 2. Clone this repo
 3. Open repo directory in vscode
-    - platformio will setup environment automatically
+    - platformio should setup environment automatically
     - if not, check if platformio.ini file is visiable in vscode explorer.
 4. Connect lilygo t-display s3 via USB
 5. Start compile & upload
@@ -28,16 +29,17 @@ Any fixes or improvements are always welcome!!
 
 #### Next, Setup collector in Proxmox
 1. Make sure python3.11 is installed
-    - python3.11 is already installed in Proxmox 8
-2. Install python requirements
+    - python3.11 is installed by default in Proxmox 8
+2. Copy collector script
     ``` bash
-    pip install -r requirments.txt
+    cd esp32servermon
+    cp metrics-collector /opt/
     ```
 3. Copy systemd service file
 4. Config collector script
     - Change DEVICE_NAME
-    - Change BAUD_RATE (Only if necessary)
-    - Change CHECK_INTERVAL (Only if necessary)
+    - Change BAUD_RATE **(Only if necessary)**
+    - Change CHECK_INTERVAL **(Only if necessary)**
     ``` python
     DEVICE_NAME = "/dev/ttyACM0"
     BAUD_RATE = 115200
