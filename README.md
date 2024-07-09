@@ -3,8 +3,8 @@ Offline server monitoring tool
 Any fixes or improvements are always welcome!!
 
 ## Working examples
-![working_sample_1](./images/IMG_0277.jpg){: width="50%" height="50%" }
-![working_sample_2](./images/IMG_0279.jpeg)
+<img src="./images/IMG_0277.jpg" width="50%" height="50%">
+<img src="./images/IMG_0279.jpeg" width="50%" height="50%">
 
 ## Tested environment
 1. Hardware
