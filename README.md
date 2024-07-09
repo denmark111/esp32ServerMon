@@ -6,6 +6,17 @@ Any fixes or improvements are always welcome!!
 <img src="./images/IMG_0277.jpg" width="50%" height="50%">
 <img src="./images/IMG_0279.jpeg" width="50%" height="50%">
 
+## Available metrics on screen
+- Current time
+- Wifi address
+- CPU usage in %
+- CPU usage history graph
+- CPU1/2 Temperature
+- Memory usage in %
+- Load Average (15m)
+- Disk R/W IOPS (Cycles between read and write with a button)
+- Overall health **(Currently not implemented)**
+
 ## Tested environment
 1. Hardware
     - Lilygo T-Display S3 (Non-touch version)
